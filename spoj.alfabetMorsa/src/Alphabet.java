@@ -69,8 +69,8 @@ public class Alphabet {
 	
 	
 	
-	/*public static String getAlphabet(){
-		// pozostałość po tworzeniu wczytywania alfabetu 
+	/*public static void getAlphabet(){
+		// pozostałosc po tworzeniu wczytywania alfabetu 
 		Scanner scan = new Scanner(System.in);
 		String out ="\n";
 		while(scan.hasNextLine()) {
@@ -81,7 +81,6 @@ public class Alphabet {
 		}
 		System.out.println(out);
 		scan.close();
-		return out;
 	}*/
 	
 }
