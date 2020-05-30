@@ -1,1 +1,1 @@
-init git for spoj
+repository for spoj project
