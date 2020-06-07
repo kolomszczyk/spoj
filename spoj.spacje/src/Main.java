@@ -6,27 +6,19 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-		String userOut = "";
 		while(scan.hasNextLine()){
-			String[] line = scan.nextLine().split(" ");
-			String out = "";
-			try {
-			for(int i=0; i<line.length; i++) {
-				StringBuilder word = new StringBuilder(line[i]);
-				word.setCharAt(0, Character.toUpperCase(word.charAt(0)));
-				out += word.toString();
+			StringBuilder line = new StringBuilder(scan.nextLine());
+			for(int i=0; i<line.length(); i++) {
+				if(line.charAt(i) == ' ') {
+					char x = line.charAt(i+ 1);
+					String y = String.valueOf(x).toUpperCase();
+					//char z = y.charAt(0);
+					//line.setCharAt(i +1 , z);
+					line.replace(i, i+2, y);
+				}	
 			}
-			} catch(Exception e) {
-				System.out.println();
-				//userOut += "\n";
-			}
-			
-			
-			//userOut += out + "\n";
-			System.out.println(out);
-			
+			System.out.println(line.toString());
 		}
-		//System.out.print(userOut);
 		scan.close();
 	}
 
